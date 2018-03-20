@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBAction func generateNumber(_ sender: Any) {
+        
+        var number = arc4random_uniform(11) //that's going to generate numbers from 0 to 10
+        resultLabel.text = String(number)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
